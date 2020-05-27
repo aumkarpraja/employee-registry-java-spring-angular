@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Optional;
-import java.util.UUID;
 
 @RestController
 @RequestMapping( "/api/employee" )
@@ -24,7 +23,7 @@ public class EmployeeController{
 	private EmployeeRepository employeeRepository;
 
 	@GetMapping( "{id}" )
-	public ResponseEntity<Employee> getEmployeeById( @PathVariable( value = "id" ) UUID employeeId ){
+	public ResponseEntity<Employee> getEmployeeById( @PathVariable( value = "id" ) long employeeId ){
 		Optional<Employee> employee = employeeRepository.findById( employeeId );
 
 		if( !employee.isPresent() ){
@@ -40,7 +39,7 @@ public class EmployeeController{
 	}
 
 	@PutMapping( "{id}" )
-	public ResponseEntity<Employee> updateEmployee( @PathVariable( value = "id" ) UUID employeeId, @RequestBody Employee employee ){
+	public ResponseEntity<Employee> updateEmployee( @PathVariable( value = "id" ) long employeeId, @RequestBody Employee employee ){
 		Optional<Employee> optionalEmployee = employeeRepository.findById( employeeId );
 
 		if( !optionalEmployee.isPresent() ){
@@ -58,11 +57,11 @@ public class EmployeeController{
 	}
 
 	@DeleteMapping( "{id}" )
-	public boolean deleteEmployee( @PathVariable( value = "id" ) UUID employeeId ){
+	public boolean deleteEmployee( @PathVariable( value = "id" ) long employeeId ){
 
 		Optional<Employee> optionalEmployee = employeeRepository.findById( employeeId );
 
-		if (!optionalEmployee.isPresent()){
+		if( !optionalEmployee.isPresent() ){
 			throw new ResponseStatusException( HttpStatus.NOT_FOUND, "Employee not found!" );
 		}
 
