@@ -4,7 +4,7 @@ import { EmployeeService } from '../employee/employee.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-create-employee',
+  selector: 'create-employee',
   templateUrl: './create-employee.component.html',
   styleUrls: ['./create-employee.component.css']
 })

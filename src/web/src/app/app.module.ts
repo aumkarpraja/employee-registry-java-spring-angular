@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
-import { EmployeeDetailsComponent } from './employee-information/employee-details.component';
+import { EmployeeInformationComponent } from './employee-information/employee-information.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { FormsModule } from "@angular/forms";
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
@@ -15,7 +15,7 @@ import { MainComponent } from './main/main.component';
   declarations: [
     AppComponent,
     CreateEmployeeComponent,
-    EmployeeDetailsComponent,
+    EmployeeInformationComponent,
     EmployeeListComponent,
     UpdateEmployeeComponent,
     MainComponent

@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { EmployeeService } from "../employee/employee.service";
 
 @Component({
-  selector: 'app-update-employee',
+  selector: 'update-employee',
   templateUrl: './update-employee.component.html',
   styleUrls: ['./update-employee.component.css']
 })
