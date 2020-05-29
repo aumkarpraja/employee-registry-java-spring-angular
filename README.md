@@ -3,6 +3,8 @@ This is a simple Angular / Java-Spring application designed to store employee da
 All employee data is stored in a mySQL database which is handled using Hibernate and JPA.
 The UI primarily was built with Bootstrap and the frontend was built using Angular.
 
+![](https://i.imgur.com/6xp1i0V.png)
+
 ## Running the Demo
 ### Prerequisites
 You will need the following installed:
