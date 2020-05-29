@@ -1,4 +1,4 @@
-package com.aumkar.SpringBootJPACrudExample.employee;
+package com.aumkar.EmployeeRegistry.employee;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,7 +25,7 @@ public class Employee{
 	@Column
 	private String email;
 
-	public Employee( ){ }
+	public Employee(){ }
 
 	public Employee( String firstName, String lastName, String email ){
 		this.firstName = firstName;

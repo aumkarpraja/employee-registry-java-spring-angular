@@ -1,13 +1,13 @@
-package com.aumkar.SpringBootJPACrudExample;
+package com.aumkar.EmployeeRegistry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootJpaCrudExampleApplication {
+public class EmployeeRegistry{
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootJpaCrudExampleApplication.class, args);
+		SpringApplication.run( EmployeeRegistry.class, args);
 	}
 
 }

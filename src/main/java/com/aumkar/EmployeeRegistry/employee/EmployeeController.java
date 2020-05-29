@@ -1,4 +1,4 @@
-package com.aumkar.SpringBootJPACrudExample.employee;
+package com.aumkar.EmployeeRegistry.employee;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
