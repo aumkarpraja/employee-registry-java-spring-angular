@@ -1,0 +1,17 @@
+<app-employee-list
+  *ngIf="display === 'employee-list'"
+  (onEmployeeUpdateSelect)="openEmployeeUpdate($event)"
+  (onEmployeeInfoSelect)="openEmployeeInfo($event)">
+</app-employee-list>
+
+<app-employee-details
+  *ngIf="display === 'employee-info'"
+  [employee]="employee"
+  (onEmployeeInfoClose)="display= 'employee-list'">
+</app-employee-details>
+
+<app-update-employee
+  *ngIf="display === 'employee-update'"
+  [employee]="employee"
+  (onEmployeeUpdate)="display = 'employee-list'">
+</app-update-employee>
