@@ -13,19 +13,15 @@ export class UpdateEmployeeComponent {
   @Input() public employee: Employee;
   @Output() public onEmployeeUpdate: EventEmitter<any> = new EventEmitter<any>();
 
-  public id: number;
-  public submitted = false;
-
   constructor(private route: ActivatedRoute, private router: Router, private employeeService: EmployeeService) { }
 
   public updateEmployee() {
-    this.employeeService.updateEmployee(this.id, this.employee).subscribe(() => {
+    this.employeeService.updateEmployee(this.employee.id, this.employee).subscribe(() => {
       this.onEmployeeUpdate.emit();
     });
   }
 
   public onSubmit() {
-    this.submitted = true;
     this.updateEmployee();
   }
 

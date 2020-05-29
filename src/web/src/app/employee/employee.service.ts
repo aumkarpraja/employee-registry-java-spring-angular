@@ -20,7 +20,7 @@ export class EmployeeService {
   }
 
   public updateEmployee(id: number, employee: Employee) {
-    return this.httpClient.put(this.baseUrl, employee);
+    return this.httpClient.put(this.baseUrl + id, employee);
   }
 
   public deleteEmployee(id: number){
