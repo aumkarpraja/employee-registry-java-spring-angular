@@ -30,7 +30,7 @@ This method requires a local running MySQL server, JDK installed and an IDE.
 3. `cd` into the `src/web` directory via Terminal and run `npm install` and then `npm start`.
 4. Visit `localhost:4200` via your browser.
 
-## Running a Demo - Method 2
+### Running a Demo - Method 2
 
 This way may be a bit more simpler but it requires Docker to run the API and the database. This method does not require JDK, an IDE or mySQL running locally but it does require Docker to be installed and properly configured.
 
