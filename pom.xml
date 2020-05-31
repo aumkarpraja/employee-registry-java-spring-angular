@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.aumkar</groupId>
-	<artifactId>SpringBootJPACrudExample</artifactId>
+	<artifactId>EmployeeRegistry</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringBootJPACrudExample</name>
+	<name>EmployeeRegistry</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -57,6 +57,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

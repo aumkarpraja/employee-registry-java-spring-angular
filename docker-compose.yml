@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  employee-reg-mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=rootdb
+      - MYSQL_USER=appuser
+      - MYSQL_PASSWORD=Passw0rd!
+    ports:
+      - 3306:3306
+
+  employee-reg-main:
+    image: aumkarpraja/employee-registry:1.0
+    restart: on-failure
+    depends_on:
+      - employee-reg-mysql
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_HOST=employee-reg-mysql
+      - DATABASE_USER=appuser
+      - DATABASE_PASSWORD=Passw0rd!
+      - DATABASE_NAME=rootdb
+      - DATABASE_PORT=3306
